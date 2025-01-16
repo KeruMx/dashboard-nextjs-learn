@@ -26,6 +26,7 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
+  'use client'
   const initialState: State = { message: '', errors: {} }; 
   const deleteInvoiceWithId = deleteInvoice.bind(null, id);
   const [state, formAction] = useActionState(deleteInvoiceWithId, initialState);
